@@ -60,6 +60,9 @@ function checkNullImage(image: Image[]) {
           <div className="subText"> 
             A spotify-based new music app.
           </div>
+          <div className="content"> 
+            Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
+          </div>
         </div>
       </div>
   
@@ -88,7 +91,8 @@ function checkNullImage(image: Image[]) {
             A spotify-based new music app.
           </div>
           <div className="content"> 
-          Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.            </div>
+            Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
+          </div>
         </div>
       </div>
     )

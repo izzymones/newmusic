@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/newmusic/static/css/main.c1e8ea73.css",
+    "main.js": "/newmusic/static/js/main.344d5ee8.js",
+    "index.html": "/newmusic/index.html",
+    "main.c1e8ea73.css.map": "/newmusic/static/css/main.c1e8ea73.css.map",
+    "main.344d5ee8.js.map": "/newmusic/static/js/main.344d5ee8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1e8ea73.css",
+    "static/js/main.344d5ee8.js"
+  ]
+}
