@@ -1,0 +1,53 @@
+.grid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+#card {
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.artistImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.artistImage {
+  margin: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+}
+
+.artistInfo {
+  background-color: #323232;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0px 25px 25px 25px;
+}
+
+.artistTitle {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  color: white;
+}
+
+.removeButton {
+  /* background-color: rgb(143, 47, 63); */
+  background-color: #4e4e4e;
+  color: white;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%
+}

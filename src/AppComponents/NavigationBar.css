@@ -1,0 +1,27 @@
+#NavBar {
+  background-color: #1a1a1a;
+  height: 60px;
+}
+
+#brand {
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#button {
+  background-color: #4e4e4e;
+  color: white;
+  width: 80px;
+  padding: 4px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

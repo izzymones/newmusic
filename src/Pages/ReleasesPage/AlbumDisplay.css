@@ -1,0 +1,84 @@
+.grid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+#card {
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.noArtistMessage {
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.noArtistMessageContainer {
+  background-color: #323232;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-radius: 40px;
+  outline: 1px solid #1f1f1f;
+}
+
+.albumInfoContainer {
+  padding: 0% 10% 10% 10%;
+  border-radius: 10px;
+}
+
+.albumInfo {
+  background-color: #323232;
+  border-radius: 10px;
+}
+
+.albumTitle {
+  margin: 2px;
+  font-size: 14px;
+  font-family:  "Helvetica Neue";
+  color: white;
+  padding-top: 10px;
+}
+
+.albumArtistName {
+  font-family: "Helvetica Neue";
+  color: rgb(255, 98, 124);
+  font-size: 12px;
+}
+
+.albumDate {
+  font-family: "Helvetica Neue";
+  color: rgb(255, 98, 124);
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.albumImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.albumImage {
+  border-radius: 5%;
+  object-fit: cover;
+  width: 75%;
+  height: 75%;
+}
+
+.refreshButton {
+  background: linear-gradient(to left top, rgb(131, 90, 255), rgb(255, 90, 107));
+  color: white;
+  border-radius: 15px;
+  padding: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 40%;
+  margin-right: 40%
+}
