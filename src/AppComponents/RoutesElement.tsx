@@ -14,7 +14,7 @@ export function RoutesElement(
   return (
   <Routes>
     <Route path="/">
-      <Route path="newmusic" element={<HomePage 
+      <Route path="home" element={<HomePage 
       loadedArtists={props.loadedArtists}/>} />
       <Route path="artists" element={<ArtistsPage 
       setLoadedArtists={props.setLoadedArtists} 
