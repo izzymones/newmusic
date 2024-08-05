@@ -14,12 +14,14 @@ export function RoutesElement(
   return (
   <Routes>
     <Route path="/">
-      <Route path="home" element={<HomePage 
+      <Route path="/" element={<HomePage 
       loadedArtists={props.loadedArtists}/>} />
+      
       <Route path="artists" element={<ArtistsPage 
       setLoadedArtists={props.setLoadedArtists} 
       setLoadedAlbums={props.setLoadedAlbums} 
       loadedArtists={props.loadedArtists}/>} />
+
       <Route path="releases" element={<ReleasesPage 
       loadedAlbums={props.loadedAlbums} 
       loadedArtists={props.loadedArtists}
