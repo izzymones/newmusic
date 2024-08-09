@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/newmusic/static/css/main.402b590f.css",
+    "main.css": "/newmusic/static/css/main.730e7aae.css",
     "main.js": "/newmusic/static/js/main.2bb24714.js",
     "index.html": "/newmusic/index.html",
-    "main.402b590f.css.map": "/newmusic/static/css/main.402b590f.css.map",
+    "main.730e7aae.css.map": "/newmusic/static/css/main.730e7aae.css.map",
     "main.2bb24714.js.map": "/newmusic/static/js/main.2bb24714.js.map"
   },
   "entrypoints": [
-    "static/css/main.402b590f.css",
+    "static/css/main.730e7aae.css",
     "static/js/main.2bb24714.js"
   ]
 }
