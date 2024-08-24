@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Album, Artist } from '../../Ultilities/MusicTypes';
-import { getArtistsAlbums, getArtist, sortArtistsByName } from '../../Ultilities/spotify';
+import { getArtist, sortArtistsByName } from '../../Ultilities/spotify';
 import './SearchBar.css'
 
 export function SearchBar(
@@ -10,11 +10,6 @@ export function SearchBar(
     loadedArtists: Artist[]
   }) {
   const [searchInput, setSearchInput] = useState("");
-  
-  async function albumSearch(artistArray: Artist[]) {
-    let albums: Album[] = await getArtistsAlbums(artistArray);
-    props.setLoadedAlbums(albums);
-  };
 
   async function artistSearch(input: string) {
     if (input !== undefined && input !== "" && input !== null) {
@@ -37,16 +32,13 @@ export function SearchBar(
       artistArray.push(artist);
       sortArtistsByName(artistArray);
       localStorage.setItem("artists", JSON.stringify(artistArray));
-      props.setLoadedArtists(artistArray);
-      albumSearch(artistArray);
+      props.setLoadedArtists([...artistArray]);
     }
   }
 
   function resetButton() {
     (document.getElementById('formElement') as HTMLFormElement)?.reset();
   }
-  
-
     return (
       <div className="searchBar">
         <form id="formElement">

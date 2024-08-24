@@ -1,45 +1,139 @@
-.searchBar {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+@media screen and (pointer: fine) and (min-width: 1000px) {
+  .searchButton {
+    background: linear-gradient(to left top, rgb(131, 90, 255), rgb(255, 90, 107));
+    color: white;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    border-right: 1px solid #2a2a2a;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin: 8px 0;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .searchBar {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #formElement {
+    width: 65%;
+  }
+  
+  input {
+    background-color: rgb(210, 210, 210);
+    border: 1px solid #2a2a2a;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin: 8px 0;
+    border-radius: 22px 0px 0px 22px;
+    box-sizing: border-box;
+  }
 }
 
-#formElement {
-  width: 65%;
+@media screen and (pointer: fine) and (max-width: 1000px) {
+  .searchButton {
+    background: linear-gradient(to left top, rgb(131, 90, 255), rgb(255, 90, 107));
+    color: white;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    border-right: 1px solid #2a2a2a;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin: 8px 0;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .searchBar {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #formElement {
+    width: 65%;
+  }
+  
+  input {
+    background-color: rgb(210, 210, 210);
+    border: 1px solid #2a2a2a;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin: 8px 0;
+    border-radius: 22px 0px 0px 22px;
+    box-sizing: border-box;
+  }
 }
 
-.searchButton {
-  background: linear-gradient(to left top, rgb(131, 90, 255), rgb(255, 90, 107));
-  color: white;
-  border-top: 1px solid #2a2a2a;
-  border-bottom: 1px solid #2a2a2a;
-  border-right: 1px solid #2a2a2a;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin: 8px 0;
-  width: 10%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px 30px 30px 0px;
-  font-size: 16px;
-  cursor: pointer;
-}
+@media (pointer: coarse) {
+  .searchButton {
+    background: linear-gradient(to left top, rgb(131, 90, 255), rgb(255, 90, 107));
+    color: white;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    border-right: 1px solid #2a2a2a;
+    padding-top: 20.75px;
+    padding-bottom: 20.75px;
+    margin: 8px 0;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 45px;
+    cursor: pointer;
+  }
 
-input {
-  background-color: rgb(210, 210, 210);
-  border: 1px solid #2a2a2a;
-  width: 100%;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin: 8px 0;
-  border-radius: 22px 0px 0px 22px;
-  box-sizing: border-box;
+  .searchBar {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #formElement {
+    width: 80%;
+  }
+  
+  input {
+    background-color: rgb(210, 210, 210);
+    border: 1px solid #2a2a2a;
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin: 8px 0;
+    font-size: 50px;
+    border-radius: 22px 0px 0px 22px;
+    box-sizing: border-box;
+  }
 }
 
 ::placeholder {

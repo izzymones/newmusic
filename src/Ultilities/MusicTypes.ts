@@ -25,7 +25,13 @@ class Album {
     this.artists = albumObject.artists.map((a: any) => a.name);
     this.releaseDate = albumObject.release_date;
     this.images = albumObject.images.map((im: any) => new Image(im));
-    this.albumType = albumObject.album_type;
+    if (albumObject.album_type === 'single') {
+      this.albumType = "Single";
+    } else if (albumObject.album_type === 'album') {
+      this.albumType = "Album";
+    } else {
+      this.albumType = "Unknown";
+    }
     this.uri = albumObject.uri;
     this.totalTracks = albumObject.total_tracks;
     this.backgroundColor = backgroundColor;

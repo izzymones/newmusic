@@ -7,6 +7,8 @@ import { RoutesElement } from './RoutesElement'
 function App() {
   const [loadedAlbums, setLoadedAlbums] = useState<Album[]>([]);
   const [loadedArtists, setLoadedArtists] = useState<Artist[]>([]);
+  const [loadingArtist, setLoadingArtist] = useState("");
+
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem('artists')!);
@@ -21,9 +23,11 @@ function App() {
       <NavigationBar/>
       <RoutesElement 
         setLoadedArtists={setLoadedArtists} 
-        setLoadedAlbums={setLoadedAlbums} 
+        setLoadedAlbums={setLoadedAlbums}
+        setLoadingArtist={setLoadingArtist}
         loadedArtists={loadedArtists} 
-        loadedAlbums={loadedAlbums}/>
+        loadedAlbums={loadedAlbums}
+        loadingArtist={loadingArtist}/>
     </div>
   );
 }

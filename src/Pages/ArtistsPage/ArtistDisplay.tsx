@@ -1,5 +1,4 @@
 import { Artist, Album, Image } from '../../Ultilities/MusicTypes';
-import { getArtistsAlbums } from '../../Ultilities/spotify';
 import './ArtistDisplay.css';
 
 export function ArtistDisplay(props: {loadedArtists: Artist[], setLoadedArtists: (al: Artist[]) => void, setLoadedAlbums: (al: Album[]) => void}) {
@@ -9,11 +8,6 @@ export function ArtistDisplay(props: {loadedArtists: Artist[], setLoadedArtists:
     } else {
       return 'nullArtist.png';
     };
-  };
-
-  async function albumSearch(artistArray: Artist[]) {
-    let albums: Album[] = await getArtistsAlbums(artistArray);
-    props.setLoadedAlbums(albums);
   };
 
   return (
@@ -37,7 +31,6 @@ export function ArtistDisplay(props: {loadedArtists: Artist[], setLoadedArtists:
                     artistArray.splice(artistArray.indexOf(artist),1);
                     localStorage.setItem("artists", JSON.stringify(artistArray));
                     props.setLoadedArtists([...artistArray]);
-                    albumSearch(artistArray);
                   }}>
                     Remove
                 </div> 

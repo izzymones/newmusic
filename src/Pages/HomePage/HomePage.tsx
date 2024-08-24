@@ -1,6 +1,7 @@
 import './HomePage.css';
 import { Artist, Image} from '../../Ultilities/MusicTypes';
 import { useEffect, useState } from 'react';
+import {BrowserView, MobileView} from 'react-device-detect';
 
 export function HomePage(props: {loadedArtists: Artist[]}) {
   const [randomArtists, setRandomArtists] = useState<Artist[]>([]);
@@ -43,57 +44,114 @@ function checkNullImage(image: Image[]) {
 
   if (randomArtists.length !== 0) {
     return (
-      <div className="HomeDiv">
-        <ul className="list" id="carousel" 
-        onLoad={setCarouselPosition} 
-        onMouseMove={mousemovefunction}>
-          {randomArtists.map((artist: Artist) => {
-            return (
-              <li className="item"><img className="homePageImage" alt="" src={checkNullImage(artist.images)}/></li>
-            )
-          })}
-        </ul>
-        <div className="textContainer">
-          <div className="homeText"> 
-            Izzy's Music App.
+      <div>
+        <BrowserView>
+          <div className="HomeDiv">
+            <ul className="list" id="carousel" 
+            onLoad={setCarouselPosition} 
+            onMouseMove={mousemovefunction}>
+              {randomArtists.map((artist: Artist) => {
+                return (
+                  <li className="item"><img className="homePageImage" alt="" src={checkNullImage(artist.images)}/></li>
+                )
+              })}
+            </ul>
+            <div className="textContainer">
+              <div className="homeText"> 
+                Izzy's Music App.
+              </div>
+              <div className="subText"> 
+                A spotify-based new music app.
+              </div>
+              <div className="content"> 
+                Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
+              </div>
+            </div>
           </div>
-          <div className="subText"> 
-            A spotify-based new music app.
-          </div>
-          <div className="content"> 
-            Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
-          </div>
-        </div>
+        </BrowserView>
+        <MobileView>
+          <div className="HomeDiv">
+              <ul className="list" id="carousel" 
+              onLoad={setCarouselPosition}>
+                {randomArtists.map((artist: Artist) => {
+                  return (
+                    <li className="item"><img className="homePageImage" alt="" src={checkNullImage(artist.images)}/></li>
+                  )
+                })}
+              </ul>
+              <div className="textContainer">
+                <div className="homeText"> 
+                  Izzy's Music App.
+                </div>
+                <div className="subText"> 
+                  A spotify-based new music app.
+                </div>
+                <div className="content"> 
+                  Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
+                </div>
+              </div>
+            </div>
+        </MobileView>
       </div>
-  
     )
   } else {
     return (
-      <div className="HomeDiv">
-        <ul className="list" id="carousel" 
-        onLoad={setCarouselPosition} 
-        onMouseMove={mousemovefunction}>
-          <li className="item"><img className="homePageImage" alt="" src="Sampha.jpg"/></li>
-          <li className="item"><img className="homePageImage" alt="" src='Yeule.jpg'/></li>
-          <li className="item"><img className="homePageImage" alt="" src='BillieEilish.jpg'/></li>
-          <li className="item"><img className="homePageImage" alt="" src='Smino.jpg'/></li>
-          <li className="item"><img className="homePageImage" alt="" src='KaliUchis.jpg'/></li>
-          <li className="item"><img className="homePageImage" alt="" src='JapaneseBreakfast.jpg'/></li>
-          <li className="item"><img className="homePageImage" alt="" src='JoeyValenceBrae.jpg'/></li>
-          <li className="item"><img className="homePageImage" alt="" src='HaruNemuri.jpg'/></li>
-          <li className="item"><img className="homePageImage" alt="" src='JADE.jpg'/></li>
-        </ul>
-        <div className="textContainer">
-          <div className="homeText"> 
-            Izzy's Music App.
+      <div>
+        <BrowserView>
+          <div className="HomeDiv">
+            <ul className="list" id="carousel" 
+            onLoad={setCarouselPosition} 
+            onMouseMove={mousemovefunction}>
+              <li className="item"><img className="homePageImage" alt="" src="Sampha.jpg"/></li>
+              <li className="item"><img className="homePageImage" alt="" src='Yeule.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='BillieEilish.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='Smino.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='KaliUchis.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='JapaneseBreakfast.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='JoeyValenceBrae.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='HaruNemuri.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='JADE.jpg'/></li>
+            </ul>
+            <div className="textContainer">
+              <div className="homeText"> 
+                Izzy's Music App.
+              </div>
+              <div className="subText"> 
+                A spotify-based new music app.
+              </div>
+              <div className="content"> 
+                Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
+              </div>
+            </div>
           </div>
-          <div className="subText"> 
-            A spotify-based new music app.
+        </BrowserView>
+        <MobileView>
+          <div className="HomeDiv">
+            <ul className="list" id="carousel" 
+            onLoad={setCarouselPosition}>
+              <li className="item"><img className="homePageImage" alt="" src="Sampha.jpg"/></li>
+              <li className="item"><img className="homePageImage" alt="" src='Yeule.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='BillieEilish.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='Smino.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='KaliUchis.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='JapaneseBreakfast.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='JoeyValenceBrae.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='HaruNemuri.jpg'/></li>
+              <li className="item"><img className="homePageImage" alt="" src='JADE.jpg'/></li>
+            </ul>
+            <div className="textContainer">
+              <div className="homeText"> 
+                Izzy's Music App.
+              </div>
+              <div className="subText"> 
+                A spotify-based new music app.
+              </div>
+              <div className="content"> 
+                Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
+              </div>
+            </div>
           </div>
-          <div className="content"> 
-            Has your favorite artist dropped that new album or released a new single? This app helps you monitor the recent releases of all your favorite artists so you never miss a song.
-          </div>
-        </div>
+        </MobileView>
       </div>
     )
   }

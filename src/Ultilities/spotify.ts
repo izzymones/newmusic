@@ -3,7 +3,7 @@ import { FastAverageColor } from 'fast-average-color';
 
  
 const clientId = "1428a54cde744da8898c1a6743c7c53a";
-const clientSecret="4e4971ac59f444f3a71b143deaa35b98";
+const clientSecret = "4e4971ac59f444f3a71b143deaa35b98";
 
 class Parameters {
     method: string;
@@ -51,11 +51,9 @@ export async function fetchArtistID(searchInput: string, searchParams: Parameter
 };
 
 export async function fetchAlbums(artistID: string, searchParams: Parameters) {
-    console.log(artistID)
     const albums = await fetch('https://api.spotify.com/v1/artists/' + artistID + '/albums?include_groups=album,single&market=US&limit=50', searchParams)
     .then(response => response.json())
     .then(data => { 
-        console.log(data.items)
         return data.items});
     return albums;
 };
@@ -88,15 +86,17 @@ export function sortArtistsByName(artistArray: Artist[]) {
     artistArray.sort((a, b) => a.name.localeCompare(b.name))
 };
 
-export async function getArtistsAlbums(artistArray: Artist[]) {
+export async function getArtistsAlbumsRefresh(artistArray: Artist[], setLoadingArtist: (al: string) => void) {
     let accessToken = await getAccessToken();
     let searchParams = setUpParam(accessToken);
     let albumArray: Album[] = [];
     for (let i = 0; i < artistArray.length; i++) {
+        setLoadingArtist(artistArray[i].name)
         let unloadedAlbums = await fetchAlbums(artistArray[i].id, searchParams);
         albumArray = albumArray.concat(unloadedAlbums);
     };
     let builtAlbums = await buildAlbums(albumArray);
+    setLoadingArtist("");
     return sortAlbumsByDate(builtAlbums);
 };
 
@@ -106,7 +106,6 @@ export async function getArtist(searchInput: string) {
     let artist = await fetchArtist(searchInput, searchParams);
     let backgroundColor = "2a2a2a"
     if (artist.images.length !== 0) {
-        console.log("test")
         backgroundColor = await getAverageColor(artist.images[0].url)
     }
     if (artist !== undefined) {

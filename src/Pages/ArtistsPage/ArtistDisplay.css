@@ -1,53 +1,97 @@
-.grid {
-  margin: 20px;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+@media (pointer: fine) {
+  #card {
+    margin: 20px;
+    border-radius: 10px;
+  }
+
+  .artistImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .artistImage {
+    margin: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 80%;
+    height: 80%;
+  }
+
+  .artistInfo {
+    background-color: #323232;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0px 25px 25px 25px;
+  }
+
+  .artistTitle {
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    color: white;
+  }
+
+  .removeButton {
+    background-color: #4e4e4e;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%
+  }
 }
 
-#card {
-  margin: 20px;
-  border-radius: 10px;
-}
+@media (pointer: coarse) {
+  #card {
+    margin: 20px;
+    border-radius: 25px;
+  }
 
-.artistImageContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  aspect-ratio: 1/1;
-}
+  .artistImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
 
-.artistImage {
-  margin: 20px;
-  border-radius: 50%;
-  object-fit: cover;
-  width: 230px;
-  height: 230px;
-}
+  .artistImage {
+    margin: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 80%;
+    height: 80%;
+  }
 
-.artistInfo {
-  background-color: #323232;
-  border-radius: 10px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  margin: 0px 25px 25px 25px;
-}
+  .artistInfo {
+    background-color: #323232;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0px 35px 35px 35px;
+  }
 
-.artistTitle {
-  font-family: "Helvetica Neue";
-  font-size: 16px;
-  color: white;
-}
+  .artistTitle {
+    font-family: "Helvetica Neue";
+    font-size: 28px;
+    color: white;
+  }
 
-.removeButton {
-  /* background-color: rgb(143, 47, 63); */
-  background-color: #4e4e4e;
-  color: white;
-  border-radius: 5px;
-  padding: 4px;
-  font-size: 12px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-left: 10%;
-  margin-right: 10%
+  .removeButton {
+    background-color: #4e4e4e;
+    color: white;
+    border-radius: 12px;
+    padding: 15px 0px 15px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%
+  }
 }

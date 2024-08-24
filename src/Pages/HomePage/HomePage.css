@@ -1,74 +1,186 @@
+@media screen and (pointer:fine) and (min-width: 1200px) {
+  .homeText {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: "Arial";
+    font-size: 70px;
+    font-weight: bold;
+  }
+  
+  .subText {
+    text-align: center;
+    color: white;
+    font-family: "Tahoma";
+    font-size: 40px;
+  }
+
+  .content {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-family: "Tahoma";
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (pointer:fine) and (min-width: 900px) and (max-width: 1200px) {
+  .homeText {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: "Arial";
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  .subText {
+    text-align: center;
+    color: white;
+    font-family: Tahoma, Helvetica;
+    font-size: 20px;
+  }
+
+  .content {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-family: Tahoma, Helvetica;
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (pointer:fine) and (min-width: 0px) and (max-width: 900px){
+  .homeText {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .subText {
+    text-align: center;
+    color: white;
+    font-family: "Tahoma";
+    font-size: 15px;
+  }
+
+  .content {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-family: "Tahoma";
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (pointer: fine) {
+  .item {
+    flex-shrink: 0;
+    gap: 8px;
+    background-color: #FFF;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+
+  .list {
+    display: flex;
+    list-style: none;
+    overflow-x: hidden;
+    padding-left: 30px;
+    padding-right: 50px;
+    height: 300px;
+    gap: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .textContainer {
+    height: 38%;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+  }
+}
+
+@media (pointer: coarse) {
+  .homeText {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: "Arial";
+    font-size: 100px;
+    font-weight: bold;
+  }
+  
+  .subText {
+    text-align: center;
+    color: white;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 70px;
+  }
+
+  .content {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  .textContainer {
+    height: 38%;
+    margin-top: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+  }
+  
+  .item {
+    flex-shrink: 0;
+    gap: 8px;
+    background-color: #FFF;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    scroll-snap-align: center;
+  }
+
+  .list {
+    display: flex;
+    list-style: none;
+    overflow-x: hidden;
+    padding-left: 30px;
+    padding-right: 50px;
+    height: 500px;
+    gap: 60px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+  
+}
+
 .HomeDiv {
   display: flex;
   flex-direction: column;
-  position:absolute;
-  top: 60px;
-  bottom: 0px;
   width: 100%;
   color: white;
-}
-
-.spacer {
-  height: 25%;
-  width: 100%;
-  color: white;
-}
-
-.textContainer {
-  height: 38%;
-  margin-top: 20px;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-left: 20px;
-  padding-right: 20px;
-  /* background-color: #4e4e4e; */
-  border-radius: 25px;
-}
-
-.homeText {
-  padding-top: 10px;
-  text-align: center;
-  color: white;
-  font-family: "Arial";
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.subText {
-  text-align: center;
-  color: white;
-  font-family: "Tahoma";
-  font-size: 40px;
-}
-
-.content {
-  padding-top: 20px;
-  text-align: center;
-  color: white;
-  font-family: "Tahoma";
-  font-size: 18px;
-  padding-bottom: 20px;
-}
-
-.list {
-  display: flex;
-  list-style: none;
-  overflow-x: hidden;
-  padding-left: 30px;
-  padding-right: 50px;
-  gap: 60px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.item {
-  flex-shrink: 0;
-  gap: 8px;
-  width: 25%;
-  aspect-ratio: 1 / 1;
-  background-color: #FFF;
-  border-radius: 50%;
-
 }
 
 .homePageImage {

@@ -8,8 +8,10 @@ export function RoutesElement(
   props: {
     setLoadedArtists: (al: Artist[]) => void, 
     setLoadedAlbums: (al: Album[]) => void, 
+    setLoadingArtist: (al: string) => void, 
     loadedArtists: Artist[], 
-    loadedAlbums: Album[]
+    loadedAlbums: Album[],
+    loadingArtist: string,
   }) {
   return (
   <Routes>
@@ -25,7 +27,10 @@ export function RoutesElement(
       <Route path="releases" element={<ReleasesPage 
       loadedAlbums={props.loadedAlbums} 
       loadedArtists={props.loadedArtists}
-      setLoadedAlbums={props.setLoadedAlbums}/>} />
+      loadingArtist={props.loadingArtist}
+      setLoadedAlbums={props.setLoadedAlbums}
+      setLoadingArtist={props.setLoadingArtist}/>}
+       />
     </Route>
   </Routes>
   )
